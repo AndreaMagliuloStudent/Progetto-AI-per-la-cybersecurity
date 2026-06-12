@@ -1,27 +1,3 @@
-"""
-predict_real_file.py
-====================
-
-Classifica un file PE reale (.exe / .dll / .sys) come 'legitimate' o 'MALWARE'
-usando il modello Random Forest tunato salvato dal notebook 03.
-
-USO
-----
-    python predict_real_file.py <percorso_al_file>
-
-ESEMPI
--------
-    python predict_real_file.py C:\\Windows\\System32\\cmd.exe
-    python predict_real_file.py C:\\Windows\\System32\\notepad.exe
-    python predict_real_file.py C:\\Windows\\System32\\Kernel32.dll
-
-NOTE DI SICUREZZA
-------------------
-- Lo script NON esegue il file. Usa pefile per leggere staticamente l'header.
-- Per file di malware reale usa SEMPRE una macchina virtuale isolata, senza rete.
-- Su Linux/macOS funziona comunque: pefile parsa il binario, non serve eseguirlo.
-"""
-
 import sys
 import os
 import pefile
@@ -33,15 +9,7 @@ import joblib
 MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'models', 'rf_best_model.pkl')
 
 
-# ----------------------------------------------------------------------------
 # ESTRAZIONE DELLE 77 FEATURE
-# ----------------------------------------------------------------------------
-# Le 77 feature corrispondono esattamente a quelle del dataset Kaggle
-# (amauricio/pe-files-malwares), nell'ordine usato dal training.
-# Il modello esporra' feature_names_in_ con l'ordine corretto: lo usiamo
-# come unica fonte di verita' per costruire il vettore di input.
-# ----------------------------------------------------------------------------
-
 def _section_stats(pe):
     """Calcola le statistiche aggregate sulle sezioni del file PE."""
     sections = pe.sections
@@ -84,9 +52,8 @@ def _section_stats(pe):
         'SectionMainChar':        chars[0],   # caratteristiche della sezione principale
     }
 
-
+# FUNZIONI DERIVATE BLACKLISTING
 def _suspicious_imports(pe):
-    """Conta le import function sospette (kernel32, advapi32, ws2_32, ecc.)."""
     SUSPICIOUS_DLLS = {
         'kernel32.dll', 'advapi32.dll', 'ntdll.dll', 'user32.dll',
         'ws2_32.dll', 'wininet.dll', 'urlmon.dll', 'shell32.dll'
@@ -123,15 +90,11 @@ def _suspicious_section_names(pe):
 
 
 def extract_features(file_path):
-    """
-    Estrae le 77 feature numeriche da un file PE.
-    Restituisce un dizionario {nome_feature: valore}.
-    """
     pe = pefile.PE(file_path, fast_load=False)
 
     feats = {}
 
-    # ----- DOS Header (17 feature) -----
+    # DOS Header (17 feature)
     dos = pe.DOS_HEADER
     feats['e_magic']    = dos.e_magic
     feats['e_cblp']     = dos.e_cblp
@@ -151,7 +114,7 @@ def extract_features(file_path):
     feats['e_oeminfo']  = dos.e_oeminfo
     feats['e_lfanew']   = dos.e_lfanew
 
-    # ----- File Header (7 feature) -----
+    # File Header (7 feature)
     fh = pe.FILE_HEADER
     feats['Machine']              = fh.Machine
     feats['NumberOfSections']     = fh.NumberOfSections
@@ -161,7 +124,7 @@ def extract_features(file_path):
     feats['SizeOfOptionalHeader'] = fh.SizeOfOptionalHeader
     feats['Characteristics']      = fh.Characteristics
 
-    # ----- Optional Header (28 feature) -----
+    # Optional Header (28 feature)
     oh = pe.OPTIONAL_HEADER
     feats['Magic']                       = oh.Magic
     feats['MajorLinkerVersion']          = oh.MajorLinkerVersion
@@ -192,14 +155,14 @@ def extract_features(file_path):
     feats['LoaderFlags']                 = oh.LoaderFlags
     feats['NumberOfRvaAndSizes']         = oh.NumberOfRvaAndSizes
 
-    # ----- Feature derivate (2) -----
+    # Feature derivate (2)
     feats['SuspiciousImportFunctions'] = _suspicious_imports(pe)
     feats['SuspiciousNameSection']     = _suspicious_section_names(pe)
 
-    # ----- Statistiche sezioni (15 feature) -----
+    # Statistiche sezioni (15 feature)
     feats.update(_section_stats(pe))
 
-    # ----- Data Directories (8 feature) -----
+    # Data Directories (8 feature) 
     # Indici standard nel PE format:
     # 0=Export, 1=Import, 2=Resource, 3=Exception, 4=Security
     dd = oh.DATA_DIRECTORY
@@ -215,11 +178,7 @@ def extract_features(file_path):
     pe.close()
     return feats
 
-
-# ----------------------------------------------------------------------------
 # MAIN
-# ----------------------------------------------------------------------------
-
 def main():
     if len(sys.argv) != 2:
         print(__doc__)
