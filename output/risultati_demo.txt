@@ -1,0 +1,161 @@
+﻿
+= = = = =   F I L E   L E G I T T I M I   = = = = = 
+ 
+ C a r i c o   m o d e l l o :   C : \ S a n d b o x \ s c r i p t s \ . . \ m o d e l s \ r f _ b e s t _ m o d e l . p k l 
+ 
+ A n a l i z z o   f i l e :   C : \ W i n d o w s \ S y s t e m 3 2 \ c m d . e x e 
+ 
+ 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+     F i l e :                 c m d . e x e 
+ 
+     P r e d i z i o n e :     l e g i t i m a t e 
+ 
+     C o n f i d e n z a :     8 1 . 0 0 % 
+ 
+     P ( l e g i t ) :         8 1 . 0 0 % 
+ 
+     P ( m a l w a r e ) :     1 9 . 0 0 % 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+ C a r i c o   m o d e l l o :   C : \ S a n d b o x \ s c r i p t s \ . . \ m o d e l s \ r f _ b e s t _ m o d e l . p k l 
+ 
+ A n a l i z z o   f i l e :   C : \ W i n d o w s \ S y s t e m 3 2 \ n o t e p a d . e x e 
+ 
+ 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+     F i l e :                 n o t e p a d . e x e 
+ 
+     P r e d i z i o n e :     l e g i t i m a t e 
+ 
+     C o n f i d e n z a :     8 3 . 0 0 % 
+ 
+     P ( l e g i t ) :         8 3 . 0 0 % 
+ 
+     P ( m a l w a r e ) :     1 7 . 0 0 % 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+ 
+  
+ 
+ - - -   e d 0 1 e b f b c 9 e b 5 b b e a 5 4 5 a f 4 d 0 1 b f 5 f 1 0 7 1 6 6 1 8 4 0 4 8 0 4 3 9 c 6 e 5 b a b e 8 e 0 8 0 e 4 1 a a . e x e   - - - 
+ 
+ C a r i c o   m o d e l l o :   C : \ S a n d b o x \ s c r i p t s \ . . \ m o d e l s \ r f _ b e s t _ m o d e l . p k l 
+ 
+ A n a l i z z o   f i l e :   C : \ S a n d b o x \ s a m p l e s \ e d 0 1 e b f b c 9 e b 5 b b e a 5 4 5 a f 4 d 0 1 b f 5 f 1 0 7 1 6 6 1 8 4 0 4 8 0 4 3 9 c 6 e 5 b a b e 8 e 0 8 0 e 4 1 a a . e x e 
+ 
+ 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+     F i l e :                 e d 0 1 e b f b c 9 e b 5 b b e a 5 4 5 a f 4 d 0 1 b f 5 f 1 0 7 1 6 6 1 8 4 0 4 8 0 4 3 9 c 6 e 5 b a b e 8 e 0 8 0 e 4 1 a a . e x e 
+ 
+     P r e d i z i o n e :     M A L W A R E 
+ 
+     C o n f i d e n z a :     9 1 . 0 0 % 
+ 
+     P ( l e g i t ) :         9 . 0 0 % 
+ 
+     P ( m a l w a r e ) :     9 1 . 0 0 % 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+ 
+ - - -   f - m y d o o m . e x e   - - - 
+ 
+ C a r i c o   m o d e l l o :   C : \ S a n d b o x \ s c r i p t s \ . . \ m o d e l s \ r f _ b e s t _ m o d e l . p k l 
+ 
+ A n a l i z z o   f i l e :   C : \ S a n d b o x \ s a m p l e s \ f - m y d o o m . e x e 
+ 
+ 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+     F i l e :                 f - m y d o o m . e x e 
+ 
+     P r e d i z i o n e :     M A L W A R E 
+ 
+     C o n f i d e n z a :     9 5 . 0 0 % 
+ 
+     P ( l e g i t ) :         5 . 0 0 % 
+ 
+     P ( m a l w a r e ) :     9 5 . 0 0 % 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+ 
+ - - -   S C H D P L 3 2 . e x e   - - - 
+ 
+ C a r i c o   m o d e l l o :   C : \ S a n d b o x \ s c r i p t s \ . . \ m o d e l s \ r f _ b e s t _ m o d e l . p k l 
+ 
+ A n a l i z z o   f i l e :   C : \ S a n d b o x \ s a m p l e s \ S C H D P L 3 2 . e x e 
+ 
+ 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+     F i l e :                 S C H D P L 3 2 . e x e 
+ 
+     P r e d i z i o n e :     M A L W A R E 
+ 
+     C o n f i d e n z a :     9 4 . 0 0 % 
+ 
+     P ( l e g i t ) :         6 . 0 0 % 
+ 
+     P ( m a l w a r e ) :     9 4 . 0 0 % 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+ 
+ - - -   s t r i p - g i r l - 2 . 0 b d c o m _ p a t c h e s . e x e   - - - 
+ 
+ C a r i c o   m o d e l l o :   C : \ S a n d b o x \ s c r i p t s \ . . \ m o d e l s \ r f _ b e s t _ m o d e l . p k l 
+ 
+ A n a l i z z o   f i l e :   C : \ S a n d b o x \ s a m p l e s \ s t r i p - g i r l - 2 . 0 b d c o m _ p a t c h e s . e x e 
+ 
+ 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+     F i l e :                 s t r i p - g i r l - 2 . 0 b d c o m _ p a t c h e s . e x e 
+ 
+     P r e d i z i o n e :     M A L W A R E 
+ 
+     C o n f i d e n z a :     9 7 . 0 0 % 
+ 
+     P ( l e g i t ) :         3 . 0 0 % 
+ 
+     P ( m a l w a r e ) :     9 7 . 0 0 % 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+ 
+ - - -   W i n 3 2 _ k l e z . e x e   - - - 
+ 
+ C a r i c o   m o d e l l o :   C : \ S a n d b o x \ s c r i p t s \ . . \ m o d e l s \ r f _ b e s t _ m o d e l . p k l 
+ 
+ A n a l i z z o   f i l e :   C : \ S a n d b o x \ s a m p l e s \ W i n 3 2 _ k l e z . e x e 
+ 
+ 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+     F i l e :                 W i n 3 2 _ k l e z . e x e 
+ 
+     P r e d i z i o n e :     M A L W A R E 
+ 
+     C o n f i d e n z a :     9 7 . 0 0 % 
+ 
+     P ( l e g i t ) :         3 . 0 0 % 
+ 
+     P ( m a l w a r e ) :     9 7 . 0 0 % 
+ 
+ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+ 
+ 
